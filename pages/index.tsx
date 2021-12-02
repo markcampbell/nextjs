@@ -1,6 +1,6 @@
 export default function Home() {
+  console.log("dsf");
   return (
-     console.log("dsf"),
     <main>Hello DevJam</main>
   )
 }
