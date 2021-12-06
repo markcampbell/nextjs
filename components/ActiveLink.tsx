@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import React, { Children } from 'react';
 
 const ActiveLink = ({ children, activeClassName, ...props }) => {
-  const { asPath } = useRouter();
+  const { asPath } = useRouter(); // get the current path
   const child = Children.only(children);
   const childClassName = child.props.className || '';
 
@@ -14,7 +14,7 @@ const ActiveLink = ({ children, activeClassName, ...props }) => {
       ? `${childClassName} ${activeClassName}`.trim()
       : childClassName;
 
-  console.log(className);
+  // console.log(props);
   return (
     <Link href={''} {...props}>
       {React.cloneElement(child, {
